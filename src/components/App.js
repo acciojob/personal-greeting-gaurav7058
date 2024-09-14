@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
-import './../styles/App.css';
+
 const App = () => {
   const [text, setText] = useState()
+  console.log(text)
   return (
     <div>
+      
 
-    <label htmlFor='ip'>Enter your name:</label><br/>
-    <input id='ip' type='text' onChange={(e) => {
-      setText(e.target.value)
-    }} />
-    <p>{text && `Hello ${text}!`}</p>
+      <label htmlFor='ip'>Enter your name:</label><br/>
+      <input id='ip' type='text' onChange={(e) => {
+        setText(e.target.value)
+      }} />
 
-  </div>
+      {/* {text && <p>Hello {text}!</p>} */}
+
+      <p>{text && `Hello ${text}!`}</p>
+
+    </div>
   )
 }
 
